@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+app.set();
+
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
