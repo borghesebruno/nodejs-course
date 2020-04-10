@@ -6,16 +6,15 @@
     <%- include('../includes/navigation.ejs') %>
 
     <main>
-        <% if(prods.length > 0) { %>
+        <% if (prods.length > 0) { %>
             <div class="grid">
-                <% for(let product of prods) { %>
+                <% for (let product of prods) { %>
                     <article class="card product-item">
                         <header class="card__header">
                             <h1 class="product__title"><%= product.title %></h1>
                         </header>
                         <div class="card__image">
-                            <img
-                                src="<%= product.imageUrl %>"
+                            <img src="<%= product.imageUrl %>"
                                 alt="<%= product.title %>">
                         </div>
                         <div class="card__content">
@@ -29,7 +28,7 @@
                 <% } %>
             </div>
         <% } else { %>
-            <h1> No Products Found!</h1>
+            <h1>No Products Found!</h1>
         <% } %>
     </main>
 <%- include('../includes/end.ejs') %>
