@@ -1,0 +1,10 @@
+{
+	"Catch err to console": {
+		"scope": "javascript,typescript",
+		"prefix": "catch",
+		"body": [
+			".catch(err => console.log(err));"
+		],
+		"description": "Catch err to console"
+	}
+}
