@@ -62,8 +62,14 @@ sequelize
         return user;
     })
     .then((user) => {
-        // console.log(result);
-        return user.createCart();
+        return Cart.findOne({ where: { userid: user.id } })
+            .then(function (cart) {
+                if (cart === null) {
+                    return user.createCart();
+                }
+                return cart;
+            })
+            .catch((err) => console.log(err));
     })
     .then((cart) => {
         app.listen(3000);
